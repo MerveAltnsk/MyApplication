@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PawTime</string>
+    <string name="Login">Login</string>
+    <string name="email">email</string>
+    <string name="password">Password</string>
+    <string name="google_maps_api_key">AIzaSyC6t-QwrVTSmQZeQuj05bvY_AWhIDQ3Mfw</string>
+
+</resources>

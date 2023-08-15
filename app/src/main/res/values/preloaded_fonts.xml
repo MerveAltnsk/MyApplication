@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/acme</item>
+        <item>@font/aladin</item>
+        <item>@font/alice</item>
+        <item>@font/anaheim</item>
+        <item>@font/antic</item>
+        <item>@font/balthazar</item>
+        <item>@font/gurajada</item>
+        <item>@font/katibeh</item>
+        <item>@font/markazi_text</item>
+        <item>@font/suravaram</item>
+    </array>
+</resources>
