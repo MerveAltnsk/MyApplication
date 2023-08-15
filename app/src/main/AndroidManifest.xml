@@ -33,6 +33,7 @@
             android:exported="false" />
 
         <activity
+
             android:name=".CreatedAnimalProfiles"
             android:exported="false" />
         <activity
