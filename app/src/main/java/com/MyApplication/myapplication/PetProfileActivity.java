@@ -35,6 +35,7 @@ public class PetProfileActivity extends AppCompatActivity {
     TextView textViewAddress;
     TextView adoptedUser;
 
+    View separatorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,7 @@ public class PetProfileActivity extends AppCompatActivity {
         textViewAddress = findViewById(R.id.textViewAddress);
         adoptedUser = findViewById(R.id.adoptedUser);
         buttonBackPetProfile1 = findViewById(R.id.buttonBackPetProfile1);
-
+        separatorView = findViewById(R.id.separatorView);
 
 
         buttonBackPetProfile1.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,14 @@ public class PetProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(PetProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
+
+
+                if (textViewAddress.getText().length() > 50) {
+                    separatorView.setVisibility(View.VISIBLE); // Ayracı görünür yap
+                } else {
+                    separatorView.setVisibility(View.GONE); // Ayracı gizle
+                }
+
             }
         });
 

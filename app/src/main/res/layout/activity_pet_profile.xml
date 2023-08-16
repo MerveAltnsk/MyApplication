@@ -1,207 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#fff"
+    android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="44dp"
-        android:layout_height="37dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView33"
-        app:layout_constraintTop_toTopOf="parent"
-        android:elevation="20dp"
-        app:srcCompat="@drawable/back5" />
-
-
-
-    <ImageView
-        android:id="@+id/imageView33"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/wallpaper"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/buttonBackPetProfile1"
-        android:layout_width="72dp"
-        android:layout_height="67dp"
-        android:background="@android:color/transparent"
-        android:text=" "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView33"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription=" " />
+        android:layout_height="match_parent">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="418dp"
-        android:layout_height="34dp"
-        android:background="@drawable/greenbackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="                               Know Me"
-        app:titleTextColor="#475136" />
 
-    <ImageView
-        android:id="@+id/profileImage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:elevation="2dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/dog10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162"
-        tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Carlos"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:elevation="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/profileImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="44dp"
+                android:layout_height="37dp"
+                app:layout_constraintStart_toStartOf="@+id/imageView33"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="20dp"
+                app:srcCompat="@drawable/back5" />
 
-        <TextView
-            android:id="@+id/textViewAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2 years"
-            android:textSize="14sp"
-            android:layout_marginEnd="6dp"/>
 
-        <TextView
-            android:id="@+id/dizayn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|  "
-            android:textSize="14sp"/>
 
-        <TextView
-            android:id="@+id/textViewGender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textSize="14sp"
-            android:layout_marginEnd="6dp"/>
+            <ImageView
+                android:id="@+id/imageView33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wallpaper"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/dizayn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|  "
-            android:textSize="14sp"/>
+            <Button
+                android:id="@+id/buttonBackPetProfile1"
+                android:layout_width="72dp"
+                android:layout_height="67dp"
+                android:background="@android:color/transparent"
+                android:text=" "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView33"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:contentDescription=" " />
 
-        <TextView
-            android:id="@+id/textViewType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type"
-            android:textSize="14sp"
-            android:layout_marginEnd="6dp"/>
-        <TextView
-            android:id="@+id/dizayn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|  "
-            android:textSize="14sp"/>
-        <TextView
-            android:id="@+id/textViewAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address"
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="418dp"
+                android:layout_height="34dp"
+                android:background="@drawable/greenbackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="                               Know Me"
+                app:titleTextColor="#475136" />
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dog10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.162"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Carlos"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewName" />
-    </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/textViewName">
+
+            <TextView
+                android:id="@+id/textViewAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="2 years"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dizayn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|  "
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="Male"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" /> <!-- Aralık eklendi -->
+
+            <TextView
+                android:id="@+id/dizayn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|  "
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="Type"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" /> <!-- Aralık eklendi -->
+
+            <TextView
+                android:id="@+id/dizayn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|  "
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/separatorView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#CCCCCC"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAddress" />
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+        </LinearLayout>
 
 
 
-    <TextView
-        android:id="@+id/adoptedUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/adoptButton"
-        android:layout_width="262dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="72dp"
-        android:backgroundTint="#FFA0CC59"
-        android:elevation="2dp"
-        android:paddingHorizontal="44dp"
-        android:paddingVertical="12dp"
-        android:text="Adopt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adoptedUser" />
+        <TextView
+                android:id="@+id/adoptedUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
-    <Button
-        android:id="@+id/locationButton"
-        android:layout_width="324dp"
-        android:layout_height="49dp"
-        android:background="#00000000"
-        android:backgroundTint="#874848"
-        android:contentDescription="Adopt"
-        android:elevation="20dp"
-        android:paddingHorizontal="34dp"
-        android:paddingVertical="12dp"
-        android:text="   "
-        app:layout_constraintBottom_toTopOf="@+id/toolbar1"
+        <Button
+            android:id="@+id/adoptButton"
+            android:layout_width="262dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="108dp"
+            android:backgroundTint="#FFA0CC59"
+            android:elevation="2dp"
+            android:paddingHorizontal="44dp"
+            android:paddingVertical="12dp"
+            android:text="  Adopt "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adoptedUser" />
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        <Button
+            android:id="@+id/locationButton"
+            android:layout_width="324dp"
+            android:layout_height="49dp"
+            android:background="#00000000"
+            android:backgroundTint="#874848"
+            android:contentDescription=" "
+            android:elevation="20dp"
+            android:paddingHorizontal="34dp"
+            android:paddingVertical="12dp"
+            android:text="   "
+            app:layout_constraintBottom_toTopOf="@+id/toolbar1"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adoptButton"
-        app:layout_constraintVertical_bias="0.782" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar1"
-        android:layout_width="288dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="556dp"
-        android:background="@drawable/pinkbackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title=" Show me on the map "
-        app:titleTextColor="#719A2A" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adoptButton"
+            app:layout_constraintVertical_bias="0.701" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="288dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="588dp"
+            android:background="@drawable/pinkbackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title=" Show me on the map "
+            app:titleTextColor="#719A2A" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

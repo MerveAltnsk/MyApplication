@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="20dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".UserProfileActivity">
 
 
-
-
     <ImageView
         android:id="@+id/imageView33"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="8328dp"
         android:scaleType="centerCrop"
         android:src="@drawable/wallpaper"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,16 +39,15 @@
         app:srcCompat="@drawable/back5" />
 
 
-
     <Button
         android:id="@+id/buttonBackPetProfile2"
         android:layout_width="76dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="340dp"
+        android:layout_marginEnd="308dp"
         android:background="@android:color/transparent"
+        android:contentDescription=" "
         android:elevation="22dp"
         android:text=" "
-        android:contentDescription=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -62,30 +65,50 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 
+    <EditText
+        android:id="@+id/editTextLoginUserName"
+        android:layout_width="370dp"
+        android:layout_height="56dp"
+        android:hint="Kullanıcı Adı"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
     <Button
         android:id="@+id/updateProfilePicture"
-        android:layout_width="159dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="317dp"
+        android:layout_height="66dp"
         android:background="@android:color/transparent"
-        android:text="              "
         android:contentDescription=" "
-        app:iconTint="#F1C3C3"
+        android:text="            "
+        app:iconTint="#F8F4F4"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/deleteProfilePicture"
-        android:layout_width="140dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="266dp"
+        android:layout_height="60dp"
         android:background="@android:color/transparent"
-        android:text="   "
         android:contentDescription=" "
+        android:text="   "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -102,134 +125,123 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/imageViewProfile"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="356dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/beyaz"
         android:clickable="true"
         android:contentDescription="User Profile Image"
         android:scaleType="centerInside"
-        android:src="@drawable/dog4"
+        android:src="@drawable/user3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/editTextLoginUserName"
-        android:layout_width="338dp"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile"
-        app:layout_constraintVertical_bias="0.346" />
-
-    <EditText
-        android:id="@+id/editTextLoginEmail"
-        android:layout_width="338dp"
-        android:layout_height="51dp"
-        android:enabled="false"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textPersonName"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginUserName"
-        app:layout_constraintVertical_bias="0.346" />
-
-
-    <Button
-        android:id="@+id/saveProfile"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:background="@android:color/transparent"
-        android:text="   "
-        android:elevation="22dp"
-        android:contentDescription=" "
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#A38D8D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteProfilePicture" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
         android:layout_width="282dp"
         android:layout_height="48dp"
-        android:layout_marginTop="584dp"
+        android:layout_marginTop="604dp"
         android:background="@drawable/pinkbackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="                    Save"
+        app:title="                    "
         app:titleTextColor="#65685E" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="43dp"
-        android:layout_height="54dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="330dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/pinkbackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468"
-        app:srcCompat="@drawable/update1" />
+        app:title="  Change the Photograph                "
+        app:titleTextColor="#65685E" />
+
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="43dp"
-        android:layout_height="54dp"
+        android:layout_width="23dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468"
+        app:layout_constraintVertical_bias="0.365"
         app:srcCompat="@drawable/update1" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="43dp"
-        android:layout_height="54dp"
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468"
+        app:layout_constraintVertical_bias="0.689"
         app:srcCompat="@drawable/delete1" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="43dp"
-        android:layout_height="54dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="197dp"
+        android:layout_height="37dp"
+        android:text="     Delete the Account "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView33"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468"
-        app:srcCompat="@drawable/delete1" />
+        app:layout_constraintVertical_bias="0.691" />
+
+
+    <Button
+        android:id="@+id/saveProfile"
+        android:layout_width="65dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="432dp"
+        android:background="@android:color/transparent"
+        android:contentDescription=" "
+        android:elevation="50dp"
+        android:text="   "
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#A38D8D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pen1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="31dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="612dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

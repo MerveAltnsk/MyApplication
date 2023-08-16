@@ -84,9 +84,13 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         SharedPreferences sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE);
                                         SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
                                         editor.putString("username", username);
                                         editor.putString("email", email);
                                         editor.apply();
+
+
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                         finish();
@@ -99,8 +103,22 @@ public class RegisterActivity extends AppCompatActivity {
                                     }
                                 }
                             });
+
+
+
+
+
+
+
                 }
             }
         });
+
+
+
+
+
+
+
     }
 }
