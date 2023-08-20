@@ -28,7 +28,7 @@ public class LoginActivity extends Activity {
     ProgressBar progressBar;
 
     @Override
-    public void onStart() {                                                                 //Kullanıcı zaten giris yaptıysa açılacaktır
+    public void onStart() {                                                                 //It will open if the user is already logged in
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
@@ -44,7 +44,6 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-
         progressBar = findViewById(R.id.progressBar);
         edUsername = findViewById(R.id.editTextLoginUserName);
         edPassword = findViewById(R.id.editTextLoginPassword);

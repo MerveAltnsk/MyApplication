@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
 
 
     private MapView mapView;
-    private Button showAllAnimalsButton;
+    //private Button showAllAnimalsButton;
     private ArrayList<PetModel> petModelArrayList = new ArrayList<>();
 
 
@@ -184,7 +184,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         imageView8 = findViewById(R.id.imageView8);
         buttonAnimalCreate1 = findViewById(R.id.buttonPlus);
         mapView = findViewById(R.id.smallMapView);
-        showAllAnimalsButton = findViewById(R.id.showAllAnimalsButton);
+       // showAllAnimalsButton = findViewById(R.id.showAllAnimalsButton);
 
         mapView.onCreate(savedInstanceState);
         rootView = findViewById(android.R.id.content);
@@ -247,14 +247,14 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         });
 
 
+/*
         showAllAnimalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAllAnimalLocationsOnMap();
             }
         });
-
-
+*/
 
         mapView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -311,6 +311,8 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
             }
         });
 
+
+/*
         showAllAnimalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -326,7 +328,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
                 showAllAnimalLocationsOnMap();
             }
         });
-
+*/
 
 
 

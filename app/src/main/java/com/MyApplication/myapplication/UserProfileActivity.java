@@ -62,7 +62,6 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
         Button updatePictureButton = findViewById(R.id.updateProfilePicture);
-        Button deletePictureButton = findViewById(R.id.deleteProfilePicture);
 
         buttonBackPetProfile2 = findViewById(R.id.buttonBackPetProfile2);
 
@@ -101,18 +100,6 @@ public class UserProfileActivity extends AppCompatActivity {
         });
 
 
-
-        deletePictureButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDeleteAccountConfirmationDialog();
-            }
-        });
-
-
-
-
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,8 +109,6 @@ public class UserProfileActivity extends AppCompatActivity {
                 }
             }
         });
-
-
 
         loadProfilePicture();
     }
@@ -191,80 +176,4 @@ public class UserProfileActivity extends AppCompatActivity {
         byte[] decodedString = android.util.Base64.decode(base64String, android.util.Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
     }
-
-
-
-    /*
-    private void deleteProfile() {
-        SharedPreferences prefs = getSharedPreferences("myPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-
-        // Kullanıcının profil verilerini sil
-        editor.remove("username");
-        editor.remove("email");
-        editor.remove("profile_image"); // Profil resmi de silinebilir
-
-        // Diğer profil bilgilerini de silme işlemi burada yapılabilir
-
-        editor.apply();
-
-        // Kullanıcıyı çıkış yapmaya zorlayabilirsiniz (isteğe bağlı)
-        // mAuth.signOut(); // FirebaseAuth kullanıyorsanız
-
-        // Kullanıcıyı giriş sayfasına yönlendirebilirsiniz
-        Intent intent = new Intent(UserProfileActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
-    }
-*/
-
-
-
-    private void showDeleteAccountConfirmationDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirm Account Deletion")
-                .setMessage("Are you sure you want to delete your account? This action cannot be undone.")
-                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // Kullanıcının hesabını sil
-                        deleteUserAccount();
-                    }
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
-    }
-
-
-
-    private void deleteUserAccount() {
-        // Kullanıcının hesabını silme işlemini burada gerçekleştirin
-        // Örneğin, Firebase Authentication kullanıyorsanız:
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            user.delete()
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                // Hesap başarıyla silindi, kullanıcıyı oturumunu kapatıp giriş sayfasına yönlendirin
-                                FirebaseAuth.getInstance().signOut();
-                                redirectToLoginPage();
-                            } else {
-                                // Hesap silinirken bir hata oluştu
-                                Toast.makeText(UserProfileActivity.this, "An error occurred while deleting the account.", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-        }
-    }
-
-
-    private void redirectToLoginPage() {
-        Intent intent = new Intent(UserProfileActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish(); // Eğer UserProfileActivity'i kapatmak isterseniz
-    }
-
-
 }

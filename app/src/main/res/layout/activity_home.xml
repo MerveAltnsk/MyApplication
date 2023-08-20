@@ -47,7 +47,6 @@
         app:layout_constraintVertical_bias="0.912" />
 
 
-
     <Button
         android:id="@+id/buttonPlus"
         android:layout_width="74dp"
@@ -57,44 +56,40 @@
         android:text="Button 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView33"
         app:layout_constraintVertical_bias="0.991" />
-
-
-
 
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="56dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.984"
-        app:srcCompat="@drawable/user2"/>
-
+        app:layout_constraintVertical_bias="0.991"
+        app:srcCompat="@drawable/user2" />
 
     <ImageView
         android:id="@+id/buttonLogout"
-        android:layout_width="42dp"
-        android:layout_height="26dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
+        app:layout_constraintVertical_bias="0.986"
         app:srcCompat="@drawable/logout2" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="51dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="240dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -125,41 +120,5 @@
         app:layout_constraintTop_toTopOf="@+id/imageView33"
         app:layout_constraintVertical_bias="0.924"
         app:spanCount="2" />
-
-    <Button
-        android:id="@+id/showAllAnimalsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button   "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
-
-    <TextView
-        android:id="@+id/addressEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
-        app:layout_constraintStart_toStartOf="@+id/imageView33"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
-
-    <Button
-        android:id="@+id/showProfilesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
