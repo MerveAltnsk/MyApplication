@@ -70,7 +70,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/dog4"
+            android:src="@drawable/dog10"
             android:layout_marginTop="16dp" />
 
 

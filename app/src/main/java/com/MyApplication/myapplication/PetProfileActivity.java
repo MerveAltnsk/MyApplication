@@ -22,9 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
-
 public class PetProfileActivity extends AppCompatActivity {
-
     Button adoptButton,buttonBackPetProfile1;
     Button locationButton;
     ImageView profileImage;
@@ -59,14 +57,11 @@ public class PetProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(PetProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
-
-
                 if (textViewAddress.getText().length() > 50) {
-                    separatorView.setVisibility(View.VISIBLE); // Ayracı görünür yap
+                    separatorView.setVisibility(View.VISIBLE);
                 } else {
-                    separatorView.setVisibility(View.GONE); // Ayracı gizle
+                    separatorView.setVisibility(View.GONE);
                 }
-
             }
         });
 
@@ -114,10 +109,6 @@ public class PetProfileActivity extends AppCompatActivity {
                         }
                     });
                 }
-//                Intent intent = new Intent(PetProfileActivity.this, MapsActivity.class);
-//                intent.putParcelableArrayListExtra("list", pets);
-//                intent.putExtra("pet", petModel);
-//                startActivity(intent);
             }
         });
 

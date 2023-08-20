@@ -14,7 +14,6 @@
     android:background="#FFFFFF"
     tools:context=".UserProfileActivity">
 
-
     <ImageView
         android:id="@+id/imageView33"
         android:layout_width="match_parent"
@@ -37,7 +36,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/back5" />
-
 
     <Button
         android:id="@+id/buttonBackPetProfile2"

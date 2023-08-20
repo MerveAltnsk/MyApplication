@@ -1,10 +1,8 @@
 package com.MyApplication.myapplication;
 
 import static android.app.ProgressDialog.show;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -34,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressBar progressBar;
 
     @Override
-    public void onStart() { // Kullanıcı zaten giriş yaptıysa açılacaktır
+    public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
@@ -103,13 +101,6 @@ public class RegisterActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
-
-
-
-
-
-
                 }
             }
         });

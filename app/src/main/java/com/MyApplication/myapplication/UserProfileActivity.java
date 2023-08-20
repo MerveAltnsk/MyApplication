@@ -34,12 +34,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private ImageView imageViewProfile;
     private Bitmap selectedImageBitmap;
-
     Button buttonBackPetProfile2;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,31 +45,17 @@ public class UserProfileActivity extends AppCompatActivity {
         String usernameFromShared = prefs.getString("username", "");
         String emailFromShared = prefs.getString("email", "");
 
-
         Log.d("UserProfileActivity", "usernameFromShared: " + usernameFromShared);
         Log.d("UserProfileActivity", "emailFromShared: " + emailFromShared);
-
-
 
         EditText name = findViewById(R.id.editTextLoginUserName);
         Button save = findViewById(R.id.saveProfile);
 
-
-
         Button updatePictureButton = findViewById(R.id.updateProfilePicture);
 
         buttonBackPetProfile2 = findViewById(R.id.buttonBackPetProfile2);
-
-
-
-        //name.setText(aStringFromShared);
-        // email.setText(emailFromShared);
-
         name.setText(usernameFromShared);
-        //email.setText(emailFromShared);
-
         imageViewProfile = findViewById(R.id.imageViewProfile);
-
 
         buttonBackPetProfile2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +64,6 @@ public class UserProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         imageViewProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +78,6 @@ public class UserProfileActivity extends AppCompatActivity {
                 openGallery();
             }
         });
-
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +98,7 @@ public class UserProfileActivity extends AppCompatActivity {
         editor.remove("profile_image");
         editor.apply();
 
-        imageViewProfile.setImageResource(R.drawable.beyaz); // Varsayılan resim ayarlanabilir
+        imageViewProfile.setImageResource(R.drawable.beyaz);
     }
 
     private void openGallery() {
