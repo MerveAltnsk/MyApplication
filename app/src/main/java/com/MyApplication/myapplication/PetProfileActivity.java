@@ -22,7 +22,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+
 public class PetProfileActivity extends AppCompatActivity {
+
     Button adoptButton,buttonBackPetProfile1;
     Button locationButton;
     ImageView profileImage;
@@ -31,9 +33,8 @@ public class PetProfileActivity extends AppCompatActivity {
     TextView textViewGender;
     TextView textViewType;
     TextView textViewAddress;
-    TextView adoptedUser;
+   // TextView adoptedUser;
 
-    View separatorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,23 +48,10 @@ public class PetProfileActivity extends AppCompatActivity {
         textViewGender = findViewById(R.id.textViewGender);
         textViewType = findViewById(R.id.textViewType);
         textViewAddress = findViewById(R.id.textViewAddress);
-        adoptedUser = findViewById(R.id.adoptedUser);
+        //adoptedUser = findViewById(R.id.adoptedUser);
         buttonBackPetProfile1 = findViewById(R.id.buttonBackPetProfile1);
-        separatorView = findViewById(R.id.separatorView);
 
 
-        buttonBackPetProfile1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PetProfileActivity.this, HomeActivity.class);
-                startActivity(intent);
-                if (textViewAddress.getText().length() > 50) {
-                    separatorView.setVisibility(View.VISIBLE);
-                } else {
-                    separatorView.setVisibility(View.GONE);
-                }
-            }
-        });
 
         PetModel petModel = getIntent().getParcelableExtra("pet");
         ArrayList<PetModel> pets = getIntent().getParcelableArrayListExtra("list");
@@ -75,42 +63,14 @@ public class PetProfileActivity extends AppCompatActivity {
                 .into(profileImage);
 
 
-
         textViewName.setText("Name: " +petModel.name);
         textViewAge.setText("Age: " + petModel.age);
         textViewGender.setText("Gender: " + petModel.gender);
         textViewType.setText("Type: " + petModel.type);
         textViewAddress.setText("Address: " + petModel.address);
         textViewAddress.setText("Address: " + petModel.address);
-        adoptedUser.setText("adopted User: " + petModel.adoptedUser);
+        //adoptedUser.setText("adopted User: " + petModel.adoptedUser);
 
-        adoptButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                String username = sharedPref.getString("username", "test");
-                if(!petModel.adoptedUser.equals("No one")){
-                    Toast.makeText(PetProfileActivity.this, "This pet already adopted!", Toast.LENGTH_SHORT).show();
-                }else{
-                    DatabaseReference mDatabase = FirebaseDatabase.getInstance("https://myapplicationanimalproject-default-rtdb.europe-west1.firebasedatabase.app").getReference();
-                    HashMap<String, Object> map = new HashMap<>();
-                    map.put("username", username);
-                    System.out.println("@@@@???? "+petModel.id);
-                    mDatabase.child("pets").child(petModel.id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(PetProfileActivity.this, "This pet adopted by you", Toast.LENGTH_SHORT).show();
-                            }else
-                                Toast.makeText(PetProfileActivity.this, "Error happens!", Toast.LENGTH_SHORT).show();
-
-                            finish();
-
-                        }
-                    });
-                }
-            }
-        });
 
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override

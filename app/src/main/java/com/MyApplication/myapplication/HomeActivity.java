@@ -49,9 +49,8 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
 
 
 
-    private ViewGroup rootView;           /////////
-    private MapView largeMapView;       //////////////
-
+    private ViewGroup rootView;
+    private MapView largeMapView;
 
 
 
@@ -63,18 +62,13 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
     DatabaseReference mDatabase;
     ImageView imageView8;
 
-    //   DatabaseReference databaseRef2;
-    //  DatabaseReference mDatabase2;
 
 
     private static final int SPLASH_SCREEN = 2000; // 2 saniye
 
 
-    //private SupportMapFragment supportMapFragment;
-    //public GoogleMap mMap;
 
     public HomeActivity() {
-        // Boş yapıcı metot gereklidir (Firebase tarafından kullanılır)
     }
 
     public HomeActivity(EditText animalName, EditText type, EditText age, EditText gender, EditText address, EditText pictureUrl,EditText latitude,EditText longitude) {
@@ -87,8 +81,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
 
         this.CreatedAnimallatitude1 = latitude;
         this.CreatedAnimallongitude1 = longitude;
-
-
 
     }
 
@@ -154,7 +146,9 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         CreatedAnimalAddress1.setText(text);
     }
 
-
+    public void setPicture(String text) {
+        CreatedAnimalPicture1.setText(text);
+    }
 
     public void setlatitude(String text) {
         CreatedAnimallatitude1.setText(text);
@@ -174,9 +168,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         setContentView(R.layout.activity_home);
 
         rv = findViewById(R.id.petsRV);
-
-        //mDatabase = FirebaseDatabase.getInstance().getReference("animal_profiles");             // Firebase veritabanı referansını almak için
-
         buttonLogout = findViewById(R.id.buttonLogout);
         imageView8 = findViewById(R.id.imageView8);
         buttonAnimalCreate1 = findViewById(R.id.buttonPlus);
@@ -201,18 +192,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
                 startActivity(intent);
             }
         });
-
-
-
-/*
-        Button showProfilesButton = findViewById(R.id.showProfilesButton);
-        showProfilesButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showAnimalProfiles();
-            }
-        });
-*/
 
 
         buttonLogout.setOnClickListener(new OnClickListener() {
@@ -243,7 +222,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
             }
         });
 
-
         showAllAnimalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -260,17 +238,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
                 showAllAnimalLocationsOnMap(); // Küçük harita tıklandığında işaretleri göster
             }
         });
-
-
-
     }
-
-
-
-
-
-
-
 
     private void showLargeMapView() {
         if (largeMapView != null) {
@@ -324,13 +292,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
             }
         });
 
-
-
-
     }
-
-
-
 
     @Override
     protected void onResume() {
@@ -387,9 +349,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
                         list.add(petModel);
 //                        }
                     }
-
                 }
-
                 petModelArrayList = list;
 
                 PetsAdapter petsAdapter = new PetsAdapter(HomeActivity.this);
@@ -403,15 +363,10 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
             }
         });
 
-
-
-
         mapView.onResume();
         if (largeMapView != null) {
             largeMapView.onResume();
         }
-
-
     }
 
     @Override
@@ -422,12 +377,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         startActivity(intent);
     }
 
-
-
-
-
-
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -435,7 +384,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         if (largeMapView != null) {
             largeMapView.onPause();
         }
-        // Diğer onPause işlemleri burada devam eder
     }
 
     @Override
@@ -445,7 +393,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         if (largeMapView != null) {
             largeMapView.onDestroy();
         }
-        // Diğer onDestroy işlemleri burada devam eder
     }
 
     @Override
@@ -455,9 +402,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         if (largeMapView != null) {
             largeMapView.onLowMemory();
         }
-        // Diğer onLowMemory işlemleri burada devam eder
     }
-
 
 
     @Override
@@ -470,12 +415,6 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
         }
         mapView.onSaveInstanceState(mapViewBundle);
     }
-
-
-
-
-
-
 
 }
 
