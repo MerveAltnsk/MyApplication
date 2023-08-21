@@ -10,8 +10,6 @@ public class PetModel implements Parcelable {
     private String latitude;
     private String longitude;
 
-
-
     String name;
     String age;
     String gender;
@@ -34,7 +32,6 @@ public class PetModel implements Parcelable {
         this.latitude = latitude;
         this.longitude = longitude;
     }
-
 
     protected PetModel(Parcel in) {
         name = in.readString();

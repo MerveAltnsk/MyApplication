@@ -46,13 +46,8 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
     private MapView mapView;
     private Button showAllAnimalsButton;
     private ArrayList<PetModel> petModelArrayList = new ArrayList<>();
-
-
-
     private ViewGroup rootView;
     private MapView largeMapView;
-
-
 
     private LinearLayout profileContainer;
     private DatabaseReference databaseRef;
@@ -235,7 +230,7 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
             @Override
             public void onClick(View v) {
                 showLargeMapView();
-                showAllAnimalLocationsOnMap(); // Küçük harita tıklandığında işaretleri göster
+                showAllAnimalLocationsOnMap();
             }
         });
     }
@@ -253,11 +248,11 @@ public class HomeActivity extends AppCompatActivity implements PetsAdapter.OnPet
                     mapFragment.getMapAsync(new OnMapReadyCallback() {
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
-                            // Büyük harita hazır olduğunda yapılması gereken işlemler
+
                         }
                     });
                 }
-                showAllAnimalLocationsOnMap(); // Büyük harita açıldığında işaretleri göster
+                showAllAnimalLocationsOnMap();
             }
         }
     }

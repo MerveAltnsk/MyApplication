@@ -1,10 +1,6 @@
 package com.MyApplication.myapplication;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,14 +10,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import android.provider.MediaStore;
-
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.MyApplication.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -31,23 +22,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.Random;
 
 public class AnimalProfiles extends AppCompatActivity {
-
-    private static final int PICK_IMAGE_REQUEST = 1;
-
-    private static final int GALLERY_REQUEST_CODE = 123;
-    private Bitmap selectedImageBitmap;
-    private ImageView uploadİmage;
-
-
     EditText animalName, type, age, gender, address, picture;
-    Button CreateProfileAnimal, backButton4;
-
-
+    Button CreateProfileAnimal,backButton4;
     ProgressBar progressBar2;
     DatabaseReference databaseRef;
 
@@ -57,6 +36,73 @@ public class AnimalProfiles extends AppCompatActivity {
 
 
 
+    /*
+    public AnimalProfiles() {
+        // Boş yapıcı metot gereklidir (Firebase tarafından kullanılır)
+    }
+
+    public AnimalProfiles(EditText animalName, EditText type, EditText age, EditText gender, EditText address, EditText pictureUrl) {
+        this.animalName = animalName;
+        this.type = type;
+        this.age = age;
+        this.gender = gender;
+        this.address = address;
+        this.picture = pictureUrl;
+    }
+    public AnimalProfiles(String animalNameText, String typeText, String ageText, String genderText, String addressText, String pictureText) {                  //Constructor
+    }
+
+    public String getAnimalName() {
+        return animalName.getText().toString();
+    }
+
+    public String getType() {
+        return type.getText().toString();
+    }
+
+    public String getAge() {
+        return age.getText().toString();
+    }
+
+    public String getGender() {
+        return gender.getText().toString();
+    }
+
+    public String getAddress() {
+        return address.getText().toString();
+    }
+
+    public String getPicture() {
+        return picture.getText().toString();
+    }
+
+
+
+    public void setAnimalName(String text) {
+        animalName.setText(text);
+    }
+    public void setType(String text) {
+        type.setText(text);
+    }
+
+    public void setAge(String text) {
+        age.setText(text);
+    }
+
+    public void setGender(String text) {
+        gender.setText(text);
+    }
+
+    public void setAddress(String text) {
+        address.setText(text);
+    }
+
+    public void setPicture(String text) {
+        picture.setText(text);
+    }
+
+
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,26 +115,12 @@ public class AnimalProfiles extends AppCompatActivity {
         address = findViewById(R.id.TextAddress);
         picture = findViewById(R.id.TextPicture);
         CreateProfileAnimal = findViewById(R.id.buttonAnimal);
-
-        uploadİmage = findViewById(R.id.imageView5);
-
-
+        //progressBar2 = findViewById(R.id.progressBar2);
         backButton4 = findViewById(R.id.backButton5);
 
         databaseRef = FirebaseDatabase.getInstance().getReference("animal_profiles");
 
         mDatabase = FirebaseDatabase.getInstance("https://myapplicationanimalproject-default-rtdb.europe-west1.firebasedatabase.app").getReference();
-
-
-        uploadİmage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGallery();
-            }
-        });
-
-
-
 
         backButton4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +129,6 @@ public class AnimalProfiles extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         CreateProfileAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,57 +211,4 @@ public class AnimalProfiles extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-
-    private void openGallery() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, GALLERY_REQUEST_CODE);
-    }
-
-
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            Uri selectedImageUri = data.getData();
-
-            try {
-                selectedImageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
-                uploadİmage.setImageBitmap(selectedImageBitmap);
-
-                saveProfilePicture(selectedImageBitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private void saveProfilePicture(Bitmap imageBitmap) {
-        SharedPreferences prefs = getSharedPreferences("myPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-
-        String imageBase64 = convertBitmapToBase64(imageBitmap);
-
-        editor.putString("profile_image", imageBase64);
-        editor.apply();
-    }
-
-    private String convertBitmapToBase64(Bitmap bitmap) {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
-        byte[] byteArray = outputStream.toByteArray();
-        return android.util.Base64.encodeToString(byteArray, android.util.Base64.DEFAULT);
-    }
-
-    private Bitmap convertBase64ToBitmap(String base64String) {
-        byte[] decodedString = android.util.Base64.decode(base64String, android.util.Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-    }
-
 }

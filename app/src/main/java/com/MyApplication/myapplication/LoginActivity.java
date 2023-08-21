@@ -66,22 +66,11 @@ public class LoginActivity extends Activity {
                 progressBar.setVisibility(View.VISIBLE);
                 String username = edUsername.getText().toString();
                 String password = edUsername.getText().toString();
-                String email = edUsername.getText().toString();  // Kullanıcı tarafından girilen e-posta
+                String email = edUsername.getText().toString();
 
 
-/*
-                if (TextUtils.isEmpty(email)){
-                    Toast.makeText(getApplicationContext(), "Please Entire E-mail",Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(getApplicationContext(), "Please Entire Password",Toast.LENGTH_SHORT).show();
-                    return;
-                }
-*/
-
-                if (username.length() == 0 || password.length() == 0 ) {              //şifre onaylamak için karşılaştırıyoruz
+                if (username.length() == 0 || password.length() == 0 ) {
                     Toast.makeText(getApplicationContext(), "Please Fill All Details", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -112,45 +101,4 @@ public class LoginActivity extends Activity {
         });
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-        //ilk parttan
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = edUsername.getText().toString();
-                String password = edPassword.getText().toString();
-
-                mAuth.signInWithEmailAndPassword(username, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Başarılı giriş, oturum açmış kullanıcının bilgileriyle UI'yı güncelle
-                                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                                } else {
-                                    // Giriş başarısız ise, kullanıcıya bir mesaj göster
-                                    Toast.makeText(LoginActivity.this, "Invalid Username and Password", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-            }
-        }
-
-        */
 

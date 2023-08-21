@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ImageView
             android:id="@+id/imageView33"
             android:layout_width="match_parent"
@@ -24,27 +23,34 @@
             tools:layout_editor_absoluteY="48dp" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView2"
             android:layout_width="300dp"
             android:layout_height="466dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="47dp"
-            android:layout_marginRight="47dp"
-            android:layout_marginBottom="448dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginRight="107dp"
+            android:layout_marginBottom="315dp"
             app:srcCompat="@drawable/dog42" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="34dp"
-            android:layout_height="39dp"
-            android:elevation="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back5" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="197dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="153dp"
+            android:layout_marginEnd="161dp"
+            android:layout_marginRight="161dp"
+            android:background="@android:color/transparent"
+            android:text="Picture Button"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:alpha="0"
+            android:elevation="0dp" />
+
 
         <ImageView
             android:id="@+id/imageView9"
@@ -60,6 +66,57 @@
 
             app:srcCompat="@drawable/cat1" />
 
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="34dp"
+            android:layout_height="39dp"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back5" />
+
+
+        <Button
+            android:id="@+id/backButton5"
+            android:layout_width="69dp"
+            android:layout_height="112dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="315dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="589dp"
+            android:background="#00000000"
+            android:contentDescription="Navigate Back"
+            android:elevation="20dp"
+            android:text=" "
+            android:textColor="#FFFFFF"
+            app:iconTint="#FDFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.246"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-119dp"
+            android:layout_marginRight="-119dp"
+            android:layout_marginBottom="613dp"
+            android:text=""
+            android:contentDescription="  "
+
+            app:backgroundTint="#1BE91EBD" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -235,7 +292,6 @@
             android:ems="10"
             android:id="@+id/editTextPicture"
             android:hint="Picture"
-            android:layout_marginBottom="55dp"
 
             android:inputType="text"
             android:paddingLeft="20dp"
@@ -248,11 +304,10 @@
             app:layout_constraintStart_toStartOf="parent"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/TextPicture"
-                android:layout_width="290dp"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextPicture"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -268,34 +323,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/backButton5"
-            android:layout_width="69dp"
-            android:layout_height="112dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="315dp"
-            android:layout_marginRight="315dp"
-            android:layout_marginBottom="589dp"
-            android:background="#00000000"
-            android:contentDescription="Navigate Back"
-            android:elevation="20dp"
-            android:text=" "
-            android:textColor="#FFFFFF"
-            app:iconTint="#FDFCFC"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.246"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.85" />
 
 
         <Button
             android:id="@+id/buttonAnimal"
-            android:layout_marginTop="4dp"
-            android:alpha="1"
-            android:background="@android:color/transparent"
             android:layout_width="338dp"
             android:layout_height="51dp"
             android:layout_alignParentEnd="true"
@@ -303,7 +334,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="49dp"
             android:layout_marginRight="49dp"
-            android:layout_marginBottom="-10dp"
+            android:layout_marginBottom="86dp"
             android:ems="10"
             android:hint="Completed"
             android:inputType="text"
@@ -311,33 +342,15 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
+            android:textColorHint="#D7FFFFFF"
+            app:backgroundTint="#8BC34A"
+            app:iconTint="#FDFCFC"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.85"
-            android:text=" "
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.246"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintVertical_bias="0.85" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="306dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="-10dp"
-            android:background="@drawable/greenbackground"
-            android:ems="9"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:title="Completed"
-
-            app:titleTextColor="#FFFFFF" />
 
 
     </RelativeLayout>
